@@ -54,6 +54,7 @@
       &__part1,
       &__part2,
       &__part3 {
+        animation: moveInLeft 1.8s cubic-bezier(0.075, 0.82, 0.165, 1);
         // background-color: rgb(0, 183, 255);
         padding: 0 0.5rem;
         .italic {
@@ -78,6 +79,7 @@
       font-size: $heading--medium-2;
       font-weight: 500;
       color: $color-button;
+      animation: moveInLeft 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
 
     &__3 {
@@ -85,6 +87,7 @@
       line-height: 2rem;
       color: $color-inactive;
       font-weight: 600;
+      animation: moveInLeft 2.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 
       .italic {
         font-style: italic;
@@ -93,6 +96,7 @@
     }
     &__4 {
       list-style: none;
+      animation: moveInLeft 3s cubic-bezier(0.075, 0.82, 0.165, 1);
       a {
         font-size: small;
         text-decoration: none;
@@ -109,5 +113,35 @@
 .rightside {
   img {
     height: 110%;
+    animation: moveInRight 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transition: all 0.5s;
+
+    &:hover {
+      opacity: 0;
+    }
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-550px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

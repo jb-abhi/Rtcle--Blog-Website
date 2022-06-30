@@ -1,5 +1,7 @@
 @import "../../stylings/variables.scss";
 
+
+
 .main-nav {
   // background-color: aqua;
   display: flex;
@@ -10,6 +12,12 @@
     color: $color-secondary;
     font-size: $heading--main;
     position: relative;
+    animation: moveInDown 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &:hover {
+      color: $color-button;
+      cursor: pointer;
+    }
 
     &__copyright {
       background-color: rgb(0, 0, 0);
@@ -30,11 +38,20 @@
     padding: 0 2.7rem;
     justify-content: space-between;
     list-style: none;
+    animation: moveInDown 1s cubic-bezier(1, 0, 0, 1);
 
     &__link {
       text-decoration: none;
       color: $color-inactive;
       font-weight: 700;
+      transition: all 0.2s;
+
+      &:hover {
+        color: $color-secondary;
+        cursor: pointer;
+        padding-bottom: 0.5rem;
+        border-bottom: solid 2px $color-button-hover;
+      }
     }
   }
   &__button {
@@ -44,5 +61,37 @@
     color: $color-secondary;
     font-size: $heading--medium-2;
     border-radius: 0.8rem;
+    animation: moveInDown 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: $color-button-hover;
+      color: $color-secondary;
+      cursor: pointer;
+    }
+  }
+}
+
+@keyframes moveInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveInDown2 {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
