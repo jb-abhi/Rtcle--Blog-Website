@@ -1,0 +1,56 @@
+.main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.main-nav__heading {
+  color: #fbfbfc;
+  font-size: 3.2rem;
+  position: relative;
+}
+
+.main-nav__heading__copyright {
+  background-color: black;
+  font-size: 1.5rem;
+  position: absolute;
+}
+
+.main-nav__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  right: 27rem;
+  bottom: 0.6rem;
+  width: 25rem;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  font-size: 1.5rem;
+  padding: 0 2.7rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+}
+
+.main-nav__links__link {
+  text-decoration: none;
+  color: #7f7f87;
+  font-weight: 700;
+}
+
+.main-nav__button {
+  background-color: #3bcf90;
+  padding: 1rem 3rem;
+  border: none;
+  color: #fbfbfc;
+  font-size: 1.5rem;
+  border-radius: 0.8rem;
+}
+/*# sourceMappingURL=header.component.css.map */

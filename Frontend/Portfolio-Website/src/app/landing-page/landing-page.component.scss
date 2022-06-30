@@ -7,11 +7,11 @@
 @import "../../stylings/variables.scss";
 
 @mixin bold {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Righteous", cursive;
   font-size: $heading--large;
   font-style: normal;
   color: $color-secondary;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 @mixin italic {
@@ -27,6 +27,9 @@
   margin: 1.5rem 14.5rem;
   padding: 5rem;
   height: 65vh;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
 }
 
 .landing {
@@ -36,11 +39,11 @@
   justify-content: space-around;
   // background-color: rgb(255, 230, 0);
   height: 55vh;
+  width: fit-content;
   // padding: 0 1.5rem;
 
   &__heading-styles {
     &__2 {
-      font-family: "Josefin Sans", sans-serif;
       font-size: $heading--large;
 
       &__part1,
@@ -50,12 +53,12 @@
         padding: 0 0.5rem;
         .italic {
           @include italic();
-          line-height: 6rem;
+          line-height: 4.8rem;
         }
 
         .bold {
           @include bold();
-          line-height: 6rem;
+          line-height: 4.8rem;
         }
       }
     }
@@ -73,6 +76,7 @@
     }
 
     &__3 {
+      margin-top: 2.5rem;
       font-size: medium;
       line-height: 2rem;
       color: $color-inactive;
@@ -92,5 +96,11 @@
         color: $color-button;
       }
     }
+  }
+}
+
+.rightside {
+  img {
+    height: 110%;
   }
 }
