@@ -8,7 +8,6 @@ import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
 })
 export class LandingPageComponent implements OnInit {
   faArrowRight = faArrowRightLong;
-
   constructor() {}
 
   ngOnInit(): void {}
