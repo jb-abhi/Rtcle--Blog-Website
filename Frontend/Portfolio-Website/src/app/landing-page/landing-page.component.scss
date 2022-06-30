@@ -92,8 +92,11 @@
       a {
         font-size: small;
         text-decoration: none;
-        text-decoration: underline;
         color: $color-button;
+      }
+      &__iconArrow {
+        color: $color-button;
+        font-size: small;
       }
     }
   }
