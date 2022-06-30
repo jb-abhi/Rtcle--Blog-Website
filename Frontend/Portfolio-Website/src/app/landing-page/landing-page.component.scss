@@ -1,0 +1,96 @@
+// font-family: 'Abel', sans-serif;
+// font-family: 'Acme', sans-serif;
+// font-family: 'Italiana', serif;
+// font-family: 'Italianno', cursive;
+
+// font-family: 'Josefin Sans', sans-serif;
+@import "../../stylings/variables.scss";
+
+@mixin bold {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: $heading--large;
+  font-style: normal;
+  color: $color-secondary;
+  font-weight: 700;
+}
+
+@mixin italic {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: $heading--large;
+  font-style: italic;
+  color: $color-button;
+  font-weight: 100;
+}
+
+.container {
+  // background-color: aqua;
+  margin: 1.5rem 14.5rem;
+  padding: 5rem;
+  height: 65vh;
+}
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  // background-color: rgb(255, 230, 0);
+  height: 55vh;
+  // padding: 0 1.5rem;
+
+  &__heading-styles {
+    &__2 {
+      font-family: "Josefin Sans", sans-serif;
+      font-size: $heading--large;
+
+      &__part1,
+      &__part2,
+      &__part3 {
+        // background-color: rgb(0, 183, 255);
+        padding: 0 0.5rem;
+        .italic {
+          @include italic();
+          line-height: 6rem;
+        }
+
+        .bold {
+          @include bold();
+          line-height: 6rem;
+        }
+      }
+    }
+  }
+
+  &__heading-style {
+    // background-color: rgb(47, 0, 255);
+    line-height: 3.5rem;
+    padding: 1rem;
+
+    &__1 {
+      font-size: $heading--medium-2;
+      font-weight: 500;
+      color: $color-button;
+    }
+
+    &__3 {
+      font-size: medium;
+      line-height: 2rem;
+      color: $color-inactive;
+      font-weight: 600;
+
+      .italic {
+        font-style: italic;
+        color: $color-secondary;
+      }
+    }
+    &__4 {
+      list-style: none;
+      a {
+        font-size: small;
+        text-decoration: none;
+        text-decoration: underline;
+        color: $color-button;
+      }
+    }
+  }
+}

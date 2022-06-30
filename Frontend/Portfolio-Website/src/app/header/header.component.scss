@@ -1,0 +1,48 @@
+@import "../../stylings/variables.scss";
+
+.main-nav {
+  // background-color: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  &__heading {
+    color: $color-secondary;
+    font-size: $heading--main;
+    position: relative;
+
+    &__copyright {
+      background-color: rgb(0, 0, 0);
+      font-size: 1.5rem;
+      position: absolute;
+    }
+  }
+
+  &__links {
+    // background-color: rgb(0, 17, 255);
+    display: flex;
+    position: relative;
+    right: 27rem;
+    bottom: 0.6rem;
+    width: 25rem;
+    flex-shrink: 1;
+    font-size: $heading--medium;
+    padding: 0 2.7rem;
+    justify-content: space-between;
+    list-style: none;
+
+    &__link {
+      text-decoration: none;
+      color: $color-inactive;
+      font-weight: 700;
+    }
+  }
+  &__button {
+    background-color: $color-button;
+    padding: 1rem 3rem;
+    border: none;
+    color: $color-secondary;
+    font-size: $heading--medium-2;
+    border-radius: 0.8rem;
+  }
+}
