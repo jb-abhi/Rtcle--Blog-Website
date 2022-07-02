@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ArticlePageComponent } from './article-page/article-page.component';
+import { ContentComponent } from './content/content.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { ArticlePageComponent } from './article-page/article-page.component';
     HeaderComponent,
     LandingPageComponent,
     ArticlePageComponent,
+    ContentComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [],

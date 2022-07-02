@@ -7,6 +7,9 @@ import {
   faYoutube,
   faPinterest,
 } from '@fortawesome/free-brands-svg-icons';
+
+import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-article-page',
   templateUrl: './article-page.component.html',
@@ -18,6 +21,7 @@ export class ArticlePageComponent implements OnInit {
   faInstagram = faInstagram;
   faYoutube = faYoutube;
   faPinterest = faPinterest;
+  faArrowRight = faArrowRightLong;
   constructor() {}
 
   ngOnInit(): void {}

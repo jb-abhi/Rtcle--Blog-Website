@@ -10,6 +10,7 @@
   height: fit-content;
   position: relative;
   animation: whitein 2s cubic-bezier(1, 0, 0, 1);
+  -webkit-animation: whitein 2s cubic-bezier(1, 0, 0, 1);
 }
 
 .main-sub-container {
@@ -28,6 +29,7 @@
   padding: 0 1.5rem;
   transition: all 0.5s;
   animation: moveInLeft 2s cubic-bezier(1, 0, 0, 1);
+  -webkit-animation: moveInLeft 2s cubic-bezier(1, 0, 0, 1);
 }
 
 .icons {
@@ -37,6 +39,7 @@
   justify-content: space-between;
   align-items: center;
   animation: moveInDown 2s cubic-bezier(1, 0, 0, 1);
+  -webkit-animation: moveInDown 2s cubic-bezier(1, 0, 0, 1);
 }
 
 .iconlist {
@@ -60,11 +63,24 @@
   border: none;
   transition: all 0.2s;
   animation: moveInLeftbutton 2.5s cubic-bezier(1, 0, 0, 1);
+  -webkit-animation: moveInLeftbutton 2.5s cubic-bezier(1, 0, 0, 1);
 
   &:hover {
     background-color: $color-button-hover;
     color: $color-secondary;
     cursor: pointer;
+  }
+}
+
+@-webkit-keyframes moveInLeftbutton {
+  0% {
+    -webkit-opacity: 0;
+    -webkit-transform: translateY(250px);
+  }
+
+  100% {
+    -webkit-opacity: 1;
+    -webkit-transform: translateY(0);
   }
 }
 
@@ -108,6 +124,7 @@
   height: 10vh;
   position: relative;
   animation: moveInUp 1s cubic-bezier(1, 0, 0, 1);
+  -webkit-animation: moveInUp 1s cubic-bezier(1, 0, 0, 1);
 
   img {
     border-radius: 50%;
@@ -118,6 +135,8 @@
     transition: all 0.2s;
     animation: moveInLeft 2s cubic-bezier(1, 0, 0, 1);
 
+    -webkit-animation: moveInLeft 2s cubic-bezier(1, 0, 0, 1);
+
     &:hover {
       width: 8%;
       cursor: pointer;
@@ -127,6 +146,10 @@
       transform: translateX(15px);
     }
   }
+}
+
+.iconArrow {
+  color: $color-highlight;
 }
 
 .sub-container {
@@ -145,8 +168,8 @@
 
   &__content__left-side {
     // background-color: aqua;
-
     margin-top: 5rem;
+
     &__main-heading {
       font-size: $f-ah-main-1;
       cursor: pointer;
@@ -266,5 +289,29 @@
   100% {
     opacity: 1;
     color: none;
+  }
+}
+
+@-webkit-keyframes moveInUp {
+  0% {
+    -webkit-opacity: 0;
+    -webkit-transform: translateY(320px);
+  }
+
+  100% {
+    -webkit-opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes moveInLeft {
+  0% {
+    -webkit-opacity: 0;
+    -webkit-transform: translateX(-20px);
+  }
+
+  100% {
+    -webkit-opacity: 1;
+    -webkit-transform: translateX(0);
   }
 }
