@@ -259,20 +259,6 @@
 .comments {
   background-color: $color-inactive-light-x3;
   padding: 2.5rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 3rem;
-
-  .user-feedback-icons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .feedback_icons {
-      font-size: $f-ch-main-3;
-      color: $color-bg;
-    }
-  }
 
   &__heading {
     font-size: $f-ch-main-2;
@@ -285,10 +271,40 @@
     background-color: $color-inactive-light;
     border-radius: 5px;
     height: 8rem;
+    margin: 2rem 0rem;
     padding: 1.5rem 2.5rem;
     cursor: pointer;
     display: flex;
     transition: all 0.15s;
+
+    .user {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+
+      .user-feedback-icons {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        color: $color-bg;
+        background-color: $color-inactive-light-x3;
+        border-radius: 5px;
+        border-top-right-radius: 0px;
+        margin-left: -3rem;
+        font-size: $f-ch-main-4;
+
+        .user_icons {
+          padding: 0 2.5rem;
+
+          &:hover {
+            color: $color-button;
+          }
+        }
+      }
+    }
 
     &:hover {
       background-color: darken($color: $color-inactive-light-x2, $amount: 8);
@@ -304,10 +320,11 @@
     .indi-comment {
       background-color: $color-inactive-light-x2;
       width: 100%;
-      padding: 1rem 2rem;
+      margin-left: -3rem;
+      padding: 1rem 3rem;
       border-radius: 10px;
+      border-bottom-right-radius: 0px;
       align-self: center;
-      margin: 3.5rem;
       text-align: left;
       font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
         "Lucida Sans", Arial, sans-serif;
@@ -370,6 +387,40 @@
   }
 }
 
+// .category {
+//   background-color: $color-secondary;
+//   padding: 2.5rem;
+//   grid-column: span 2;
+
+//   &__heading {
+//     font-size: $f-ch-main-2;
+//     display: inline-block;
+//     border-bottom: 1px solid black;
+//     cursor: pointer;
+//   }
+
+//   &__categories {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+
+//     .category-el {
+//       margin: 2.5rem 5rem;
+//       padding: 1rem 2rem;
+//       background-color: $color-secondary;
+//       border: solid 1px rgb(207, 0, 0);
+//       transition: all 0.2s;
+
+//       &:hover {
+//         background-color: rgb(207, 0, 0);
+//         color: $color-secondary;
+//         border: solid 1px $color-secondary;
+//         cursor: pointer;
+//       }
+//     }
+//   }
+// }
+
 .category {
   background-color: $color-secondary;
   padding: 2.5rem;
@@ -377,19 +428,20 @@
 
   &__heading {
     font-size: $f-ch-main-2;
-    display: inline-block;
+    display: block;
     border-bottom: 1px solid black;
     cursor: pointer;
+    text-align: center;
   }
 
   &__categories {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
 
     .category-el {
-      margin: 2.5rem 5rem;
-      padding: 1rem 2rem;
+      text-align: center;
+      margin: 1.5rem 1.5rem;
+      padding: 1rem 3rem;
       background-color: $color-secondary;
       border: solid 1px rgb(207, 0, 0);
       transition: all 0.2s;

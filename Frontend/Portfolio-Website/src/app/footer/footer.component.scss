@@ -1,0 +1,41 @@
+@import "../../stylings/variables.scss";
+
+.container {
+  background-color: $color-bg;
+  padding: 0rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.items {
+  color: $color-secondary;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2.5rem;
+  padding: 2.5rem;
+  font-size: $f-ch-main-3-4;
+}
+
+.item {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: $color-secondary;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+hr {
+  grid-column: 1/-1;
+}
+
+.rtcle_desc {
+  grid-column: 1/-1;
+  text-align: center;
+}
