@@ -44,6 +44,7 @@
     margin-top: 1rem;
     color: rgb(236, 0, 0);
     font-size: $f-ah-main-2;
+    cursor: pointer;
   }
 }
 
@@ -53,6 +54,7 @@
   grid-row: 2/5;
   grid-column: 2/3;
   padding: 2.5rem;
+  padding-top: 0rem;
   display: grid;
   grid-template-columns: minmax(15rem, 1fr);
   grid-gap: 5rem;
@@ -63,12 +65,19 @@
       font-size: $f-ah-main-2;
       display: inline-block;
       border-bottom: 1px solid black;
+      cursor: pointer;
     }
     &__story {
       border-radius: 3px;
       background-color: gold;
       margin: 2.5rem 0;
       padding: 3rem;
+      cursor: pointer;
+      transition: all 0.1s;
+
+      &:hover {
+        background-color: darken($color: gold, $amount: 2.5);
+      }
 
       .heading {
         font-size: $f-ah-main-2;
@@ -85,10 +94,16 @@
   &__features {
     padding-left: 10rem;
     // margin-left: 5rem;
+    transition: all 0.2s;
+
+    ul:hover > img {
+      opacity: 0.8;
+    }
 
     &__heading {
       font-size: $f-ah-main-2;
       display: inline-block;
+      cursor: pointer;
       border-bottom: 1px solid black;
     }
     &__story {
@@ -96,11 +111,17 @@
       margin: 2.5rem 0;
       width: 30rem;
       margin-bottom: 1.5rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken($color: gold, $amount: 2.5);
+      }
 
       .fs-images {
         height: 150px;
         width: 100%;
         object-fit: cover;
+        transition: all 0.2s;
       }
 
       .heading {
@@ -114,11 +135,13 @@
   &__elsewhere {
     padding-left: 10rem;
     // margin-left: 5rem;
+    transition: all 0.3s;
 
     &__heading {
       font-size: $f-ah-main-2;
       display: inline-block;
       border-bottom: 1px solid black;
+      cursor: pointer;
     }
     &__story {
       background-color: $color-inactive-light-x2;
@@ -126,7 +149,19 @@
       padding-bottom: 1rem;
       width: 30rem;
       height: fit-content;
+      cursor: pointer;
+      transition: all 0.3s;
 
+      &:hover > img {
+        opacity: 0.8;
+      }
+
+      &:hover {
+        background-color: darken(
+          $color: $color-inactive-light-x2,
+          $amount: 2.5
+        );
+      }
       .ew-images {
         height: 150px;
         width: 100%;
@@ -137,6 +172,7 @@
         font-size: $f-ch-main-3;
         font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
           "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        cursor: pointer;
       }
       .desc {
         padding: 1rem 1.5rem;
@@ -153,7 +189,37 @@
   // background-color: rgb(0, 112, 34);
   background-color: $color-secondary;
   padding: 6rem;
+  padding-top: 3.2rem;
   text-align: justify;
+
+  &__icons {
+    margin-top: 5rem;
+    border-radius: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: $color-desc;
+    color: $color-secondary;
+  }
+
+  .user_text {
+    font-size: $f-ah-main-3;
+  }
+  .user_icons {
+    font-size: $f-ah-main-1;
+    // transition: all 0.2s;
+  }
+  .rest:hover {
+    // background-color: rgb(207, 0, 0);
+    color: gold;
+    cursor: pointer;
+  }
+
+  .heart:hover {
+    // background-color: rgb(207, 0, 0);
+    color: rgb(255, 40, 40);
+    cursor: pointer;
+  }
 
   hr {
     border: solid 1px $color-bg;
@@ -197,24 +263,42 @@
   grid-template-columns: 1fr;
   gap: 3rem;
 
+  .user-feedback-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .feedback_icons {
+      font-size: $f-ch-main-3;
+      color: $color-bg;
+    }
+  }
+
   &__heading {
     font-size: $f-ch-main-2;
     display: inline-block;
     border-bottom: 1px solid black;
+    cursor: pointer;
   }
 
   &__comment {
     background-color: $color-inactive-light;
     border-radius: 5px;
-
     height: 8rem;
     padding: 1.5rem 2.5rem;
+    cursor: pointer;
     display: flex;
+    transition: all 0.15s;
+
+    &:hover {
+      background-color: darken($color: $color-inactive-light-x2, $amount: 8);
+    }
 
     .profileIcon {
       border-radius: 50%;
       transform: scale(1.3);
       border: solid 1px $color-bg;
+      cursor: pointer;
     }
 
     .indi-comment {
@@ -240,6 +324,7 @@
   .more-heading {
     font-size: $f-ch-main-2;
     border-bottom: 1px solid black;
+    cursor: pointer;
   }
 
   &__story {
@@ -250,7 +335,17 @@
     height: 15rem;
     border-radius: 10px;
     border-top-left-radius: 15px;
+    cursor: pointer;
     border-bottom-left-radius: 15px;
+    transition: all 0.15s;
+
+    &:hover {
+      background-color: darken($color: $color-inactive-light-x2, $amount: 8);
+    }
+
+    &:hover > img {
+      opacity: 0.9;
+    }
 
     .ms-image {
       grid-row: 1/3;
@@ -284,6 +379,7 @@
     font-size: $f-ch-main-2;
     display: inline-block;
     border-bottom: 1px solid black;
+    cursor: pointer;
   }
 
   &__categories {
@@ -296,7 +392,14 @@
       padding: 1rem 2rem;
       background-color: $color-secondary;
       border: solid 1px rgb(207, 0, 0);
-      border-radius: 5px;
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: rgb(207, 0, 0);
+        color: $color-secondary;
+        border: solid 1px $color-secondary;
+        cursor: pointer;
+      }
     }
   }
 }

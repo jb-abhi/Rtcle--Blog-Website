@@ -13,6 +13,13 @@
   color: #fbfbfc;
   font-size: 3.2rem;
   position: relative;
+  -webkit-animation: moveInDown 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+          animation: moveInDown 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.main-nav__heading:hover {
+  color: #3bcf90;
+  cursor: pointer;
 }
 
 .main-nav__heading__copyright {
@@ -37,12 +44,23 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   list-style: none;
+  -webkit-animation: moveInDown 1s cubic-bezier(1, 0, 0, 1);
+          animation: moveInDown 1s cubic-bezier(1, 0, 0, 1);
 }
 
 .main-nav__links__link {
   text-decoration: none;
   color: #7f7f87;
   font-weight: 700;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.main-nav__links__link:hover {
+  color: #fbfbfc;
+  cursor: pointer;
+  padding-bottom: 0.5rem;
+  border-bottom: solid 2px #25a56d;
 }
 
 .main-nav__button {
@@ -52,5 +70,67 @@
   color: #fbfbfc;
   font-size: 1.5rem;
   border-radius: 0.8rem;
+  -webkit-animation: moveInDown 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+          animation: moveInDown 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.main-nav__button:hover {
+  background-color: #25a56d;
+  color: #fbfbfc;
+  cursor: pointer;
+}
+
+@-webkit-keyframes moveInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes moveInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes moveInDown2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes moveInDown2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 /*# sourceMappingURL=header.component.css.map */

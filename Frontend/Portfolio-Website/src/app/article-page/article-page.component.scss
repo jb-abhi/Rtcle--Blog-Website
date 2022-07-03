@@ -26,7 +26,7 @@
 }
 
 .profile {
-  padding: 0 1.5rem;
+  padding: 0 1rem;
   transition: all 0.5s;
   animation: moveInLeft 2s cubic-bezier(1, 0, 0, 1);
   -webkit-animation: moveInLeft 2s cubic-bezier(1, 0, 0, 1);
@@ -132,13 +132,13 @@
     position: absolute;
     left: 15px;
     border: solid 2px #4897ff;
-    transition: all 0.2s;
+    transition: all 0.3s;
     animation: moveInLeft 2s cubic-bezier(1, 0, 0, 1);
 
     -webkit-animation: moveInLeft 2s cubic-bezier(1, 0, 0, 1);
 
     &:hover {
-      width: 8%;
+      transform: scale(1.1);
       cursor: pointer;
       border: solid 2px #7cb4fd;
     }
@@ -153,7 +153,6 @@
 }
 
 .sub-container {
-  z-index: -1;
   background-color: $color-bg;
   margin: 2rem 18rem;
   width: 73%;

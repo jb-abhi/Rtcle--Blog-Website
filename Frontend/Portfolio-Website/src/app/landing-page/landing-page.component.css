@@ -2,6 +2,14 @@
   margin: 1.5rem 14.5rem;
   padding: 5rem;
   height: 65vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .landing {
@@ -18,37 +26,41 @@
   -ms-flex-pack: distribute;
       justify-content: space-around;
   height: 55vh;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .landing__heading-styles__2 {
-  font-family: "Righteous", cursive;
-  -webkit-text-size-adjust: 15px;
-     -moz-text-size-adjust: 15px;
-      -ms-text-size-adjust: 15px;
-          text-size-adjust: 15px;
-  font-size: 6.5rem;
+  font-size: 5.5rem;
+}
+
+.landing__heading-styles__2__part1 {
+  margin-bottom: -7px;
 }
 
 .landing__heading-styles__2__part1, .landing__heading-styles__2__part2, .landing__heading-styles__2__part3 {
+  animation: moveInLeft 1.8s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  -webkit-animation: moveInLeft 1.8s cubic-bezier(0.95, 0.05, 0.795, 0.035);
   padding: 0 0.5rem;
 }
 
 .landing__heading-styles__2__part1 .italic, .landing__heading-styles__2__part2 .italic, .landing__heading-styles__2__part3 .italic {
   font-family: "Josefin Sans", sans-serif;
-  font-size: 6.5rem;
+  font-size: 5.5rem;
   font-style: italic;
   color: #3bcf90;
   font-weight: 100;
-  line-height: 6rem;
+  line-height: 5rem;
 }
 
 .landing__heading-styles__2__part1 .bold, .landing__heading-styles__2__part2 .bold, .landing__heading-styles__2__part3 .bold {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 6.5rem;
+  font-family: "Righteous", cursive;
+  font-size: 5.5rem;
   font-style: normal;
   color: #fbfbfc;
-  font-weight: 700;
-  line-height: 6rem;
+  font-weight: 500;
+  line-height: 5rem;
 }
 
 .landing__heading-style {
@@ -60,6 +72,8 @@
   font-size: 1.5rem;
   font-weight: 500;
   color: #3bcf90;
+  animation: moveInLeft 1.5s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  -webkit-animation: moveInLeft 1.5s cubic-bezier(0.95, 0.05, 0.795, 0.035);
 }
 
 .landing__heading-style__3 {
@@ -67,6 +81,8 @@
   line-height: 2rem;
   color: #7f7f87;
   font-weight: 600;
+  animation: moveInLeft 2.5s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  -webkit-animation: moveInLeft 2.5s cubic-bezier(0.95, 0.05, 0.795, 0.035);
 }
 
 .landing__heading-style__3 .italic {
@@ -76,12 +92,79 @@
 
 .landing__heading-style__4 {
   list-style: none;
+  animation: moveInLeft 3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  -webkit-animation: moveInLeft 3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
 }
 
 .landing__heading-style__4 a {
   font-size: small;
   text-decoration: none;
-  text-decoration: underline;
   color: #3bcf90;
+}
+
+.landing__heading-style__4__iconArrow {
+  color: #3bcf90;
+  font-size: small;
+}
+
+.rightside img {
+  height: 110%;
+  animation: moveInRight 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -webkit-animation: moveInRight 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.rightside img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(700px);
+            transform: translateX(700px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-200px);
+            transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes moveInLeft {
+  0% {
+    -webkit-opacity: 1;
+    -webkit-transform: translateX(700px);
+  }
+  100% {
+    -webkit-opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes moveInRight {
+  0% {
+    -webkit-opacity: 0;
+    -webkit-transform: translateX(-200px);
+  }
+  100% {
+    -webkit-opacity: 1;
+    -webkit-transform: translateX(0);
+  }
 }
 /*# sourceMappingURL=landing-page.component.css.map */

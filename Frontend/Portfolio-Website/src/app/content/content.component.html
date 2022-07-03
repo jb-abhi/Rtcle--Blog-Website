@@ -209,9 +209,12 @@
         appears, has also come to the same conclusion.
       </p>
     </div>
-    <div class="main-body__like-share">
-      <div class="icon-like"></div>
-      <div class="icon-share"></div>
+    <div class="main-body__icons">
+      <fa-icon class="user_icons rest" [icon]="faChevronLeft"></fa-icon>
+      <fa-icon class="user_icons heart" [icon]="faHeart"></fa-icon>
+      <fa-icon class="user_icons rest" [icon]="faUpRightFromSquare"></fa-icon>
+      <fa-icon class="user_icons rest" [icon]="faBookmark"></fa-icon>
+      <fa-icon class="user_icons rest" [icon]="faChevronRight"></fa-icon>
     </div>
   </div>
   <div class="comments">
@@ -219,6 +222,11 @@
     <div class="comments__comment">
       <img class="profileIcon" src="assets/Images/comment-2.png" alt="" />
       <p class="indi-comment">This was an interesting read.</p>
+      <!-- <div class="user-feedback-icons">
+        <fa-icon class="user_icons heart" [icon]="faHeart"></fa-icon>
+        <fa-icon class="user_icons heart" [icon]="faReply"></fa-icon>
+        <fa-icon class="user_icons heart" [icon]="faReply"></fa-icon>
+      </div> -->
     </div>
     <div class="comments__comment">
       <img class="profileIcon" src="assets/Images/comment-3.png" alt="" />
@@ -276,11 +284,11 @@
     <h3 class="category__heading">Explore others</h3>
     <div class="category__categories">
       <h2 class="category-el">India</h2>
-      <h2 class="category-el">China</h2>
-      <h2 class="category-el">America</h2>
-      <h2 class="category-el">Australia</h2>
-      <h2 class="category-el">Srilanka</h2>
-      <h2 class="category-el">Germany</h2>
+      <h2 class="category-el">Climate</h2>
+      <h2 class="category-el">World</h2>
+      <h2 class="category-el">Tech</h2>
+      <h2 class="category-el">Business</h2>
+      <h2 class="category-el">Science</h2>
     </div>
   </div>
 </div>

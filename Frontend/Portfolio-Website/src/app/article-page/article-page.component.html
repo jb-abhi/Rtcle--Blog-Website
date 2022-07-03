@@ -1,66 +1,64 @@
-<div class="overlay">
-  <div class="container">
-    <div class="main-sub-container">
-      <div class="bloggerContainer">
-        <img src="assets/Images/photo-1511367461989-f85a21fda167.jpg" />
-        <div class="profile">
-          <h2 class="abhi">Hey, I'm Abhi</h2>
-          <h3 class="fnum">25,254 <span>followers</span></h3>
+<div class="container">
+  <div class="main-sub-container">
+    <div class="sub-container">
+      <div class="sub-container__content__left-side">
+        <div class="sub-container__content__left-side__main-heading">
+          that feeling of <span style="color: #f4b672">sunshine</span> on your
+          face, <br />
+          in your <span style="color: #f4b672">inbox</span>
         </div>
-        <div class="icons">
-          <h3 class="iconlist"><fa-icon [icon]="faFacebook"></fa-icon></h3>
-          <h3 class="iconlist"><fa-icon [icon]="faInstagram"></fa-icon></h3>
-          <h3 class="iconlist"><fa-icon [icon]="faYoutube"></fa-icon></h3>
-          <h3 class="iconlist"><fa-icon [icon]="faPinterest"></fa-icon></h3>
-          <h3 class="iconlist"><fa-icon [icon]="faTwitter"></fa-icon></h3>
+        <div class="sub-container__content__left-side__sub-heading">
+          <p>
+            <span style="color: #f4b672">RTcle</span>,your bi-weekly newsletter
+            is packed full of interesting articles
+            <span class="iconArrow"
+              ><fa-icon [icon]="faArrowRight"></fa-icon
+            ></span>
+          </p>
         </div>
-        <button class="follow">Follow me</button>
       </div>
-      <div class="sub-container">
-        <div class="sub-container__content__left-side">
-          <div class="sub-container__content__left-side__main-heading">
-            that feeling of <span style="color: #f4b672">sunshine</span> on your
-            face, <br />
-            in your <span style="color: #f4b672">inbox</span>
+      <div class="sub-container__content__right-side">
+        <div class="sub-container__content__right-side__inputs">
+          <div class="sub-container__content__right-side__inputs__name">
+            <input
+              class="inputfield"
+              type="text"
+              placeholder="First name"
+              required
+            />
+            <br />
+            <label id="name">First name</label>
           </div>
-          <div class="sub-container__content__left-side__sub-heading">
-            <p>
-              <span style="color: #f4b672">RTcle</span>,your bi-weekly
-              newsletter is packed full of interesting articles
-              <span class="iconArrow"
-                ><fa-icon [icon]="faArrowRight"></fa-icon
-              ></span>
-            </p>
+          <div class="sub-container__content__right-side__inputs__email">
+            <input
+              class="inputfield"
+              type="email"
+              required
+              placeholder="Email Address"
+            />
+            <br />
+            <label id="email">Email Address</label>
           </div>
-        </div>
-        <div class="sub-container__content__right-side">
-          <div class="sub-container__content__right-side__inputs">
-            <div class="sub-container__content__right-side__inputs__name">
-              <input
-                class="inputfield"
-                type="text"
-                placeholder="First name"
-                required
-              />
-              <br />
-              <label id="name">First name</label>
-            </div>
-            <div class="sub-container__content__right-side__inputs__email">
-              <input
-                class="inputfield"
-                type="email"
-                required
-                placeholder="Email Address"
-              />
-              <br />
-              <label id="email">Email Address</label>
-            </div>
-            <div>
-              <button type="submit">Subscribe to RTcle</button>
-            </div>
+          <div>
+            <button type="submit">Subscribe to RTcle</button>
           </div>
         </div>
       </div>
+    </div>
+    <div class="bloggerContainer">
+      <img src="assets/Images/photo-1511367461989-f85a21fda167.jpg" />
+      <div class="profile">
+        <h2 class="abhi">Hey, I'm Abhi</h2>
+        <h3 class="fnum">25,254 <span>followers</span></h3>
+      </div>
+      <div class="icons">
+        <h3 class="iconlist"><fa-icon [icon]="faFacebook"></fa-icon></h3>
+        <h3 class="iconlist"><fa-icon [icon]="faInstagram"></fa-icon></h3>
+        <h3 class="iconlist"><fa-icon [icon]="faYoutube"></fa-icon></h3>
+        <h3 class="iconlist"><fa-icon [icon]="faPinterest"></fa-icon></h3>
+        <h3 class="iconlist"><fa-icon [icon]="faTwitter"></fa-icon></h3>
+      </div>
+      <button class="follow">Follow me</button>
     </div>
   </div>
 </div>
