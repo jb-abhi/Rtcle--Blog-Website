@@ -1,4 +1,5 @@
 @import "../../stylings/variables.scss";
+@import "../../stylings/mixins.scss";
 
 // font-family: 'Abel', sans-serif;
 // font-family: 'Acme', sans-serif;
@@ -13,6 +14,10 @@
   display: grid;
   grid-template-columns: minmax(15rem, 2fr), minmax(15rem, 1fr);
   grid-template-rows: min-content;
+
+  @media only screen and (max-width: 850px) {
+    padding: 3rem 0rem;
+  }
 }
 
 .article-head {
@@ -61,11 +66,24 @@
 
   &__top-stories {
     padding-left: 10rem;
+
+    @media only screen and (max-width: 1350px) {
+      padding-left: 5rem;
+    }
+
+    @media only screen and (max-width: 1130px) {
+      padding-left: 3rem;
+    }
+
     &__heading {
       font-size: $f-ah-main-2;
       display: inline-block;
       border-bottom: 1px solid black;
       cursor: pointer;
+
+      @media only screen and (max-width: 1130px) {
+        font-size: $f-ah-main-3;
+      }
     }
     &__story {
       border-radius: 3px;
@@ -76,6 +94,10 @@
       cursor: pointer;
       transition: all 0.1s;
 
+      @media only screen and (max-width: 1060px) {
+        width: auto;
+      }
+
       &:hover {
         background-color: darken($color: gold, $amount: 2.5);
       }
@@ -83,11 +105,22 @@
       .heading {
         font-size: $f-ah-main-2;
         font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+
+        @media only screen and (max-width: 1130px) {
+          font-size: $f-ah-main-3;
+        }
       }
       .time {
         font-size: $f-ah-main-3;
         font-family: Arial, Helvetica, sans-serif;
         color: $color-bg;
+        @media only screen and (max-width: 1130px) {
+          font-size: $f-ah-main-4;
+        }
+
+        @media only screen and (max-width: 1060px) {
+          font-size: $f-ah-main-4;
+        }
       }
     }
   }
@@ -96,6 +129,14 @@
     padding-left: 10rem;
     // margin-left: 5rem;
     transition: all 0.2s;
+
+    @media only screen and (max-width: 1350px) {
+      padding-left: 5rem;
+    }
+
+    @media only screen and (max-width: 1130px) {
+      padding-left: 3rem;
+    }
 
     ul:hover > img {
       opacity: 0.8;
@@ -106,6 +147,10 @@
       display: inline-block;
       cursor: pointer;
       border-bottom: 1px solid black;
+
+      @media only screen and (max-width: 1130px) {
+        font-size: $f-ah-main-3;
+      }
     }
     &__story {
       background-color: gold;
@@ -113,6 +158,10 @@
       width: 30rem;
       margin-bottom: 1.5rem;
       cursor: pointer;
+
+      @media only screen and (max-width: 1060px) {
+        width: auto;
+      }
 
       &:hover {
         background-color: darken($color: gold, $amount: 2.5);
@@ -129,6 +178,14 @@
         padding: 1rem 2rem;
         font-size: $f-ah-main-3;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        @media only screen and (max-width: 1130px) {
+          font-size: $f-ah-main-3;
+        }
+
+        @media only screen and (max-width: 1060px) {
+          font-size: $f-ah-main-4;
+        }
       }
     }
   }
@@ -138,11 +195,27 @@
     // margin-left: 5rem;
     transition: all 0.3s;
 
+    @media only screen and (max-width: 1350px) {
+      padding-left: 5rem;
+    }
+
+    @media only screen and (max-width: 1130px) {
+      padding-left: 3rem;
+    }
+
+    // @media only screen and (max-width: 1060px) {
+    //   padding-left: 10rem;
+    // }
+
     &__heading {
       font-size: $f-ah-main-2;
       display: inline-block;
       border-bottom: 1px solid black;
       cursor: pointer;
+
+      @media only screen and (max-width: 1130px) {
+        font-size: $f-ah-main-3;
+      }
     }
     &__story {
       background-color: $color-inactive-light-x2;
@@ -152,6 +225,10 @@
       height: fit-content;
       cursor: pointer;
       transition: all 0.3s;
+
+      @media only screen and (max-width: 1060px) {
+        width: auto;
+      }
 
       &:hover > img {
         opacity: 0.8;
@@ -174,6 +251,14 @@
         font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
           "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
         cursor: pointer;
+
+        @media only screen and (max-width: 1130px) {
+          font-size: $f-ah-main-3;
+        }
+
+        @media only screen and (max-width: 1060px) {
+          font-size: $f-ah-main-4;
+        }
       }
       .desc {
         padding: 1rem 1.5rem;
@@ -181,6 +266,10 @@
         font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
           "Lucida Sans", Arial, sans-serif;
         color: $color-desc;
+
+        @media only screen and (max-width: 1130px) {
+          font-size: $f-ah-main-4;
+        }
       }
     }
   }

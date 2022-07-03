@@ -1,18 +1,32 @@
 @import "../../stylings/variables.scss";
+@import "../../stylings/mixins.scss";
 
-
+// .container {
+//   display: flex;
+// }
 
 .main-nav {
   // background-color: aqua;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  flex-grow: 1;
+
+  @media only screen and (max-width: 600px) {
+    width: 80rem;
+  }
 
   &__heading {
     color: $color-secondary;
     font-size: $heading--main;
     position: relative;
+    margin-right: 20rem;
     animation: moveInDown 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    @media only screen and (max-width: 600px) {
+      margin-left: 5rem;
+      margin-right: 30rem;
+    }
 
     &:hover {
       color: $color-button;
@@ -20,7 +34,6 @@
     }
 
     &__copyright {
-      background-color: rgb(0, 0, 0);
       font-size: 1.5rem;
       position: absolute;
     }

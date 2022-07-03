@@ -1,10 +1,29 @@
 @import "../../stylings/variables.scss";
-
+@import "../../stylings/mixins.scss";
 // font-family: 'Abel', sans-serif;
 // font-family: 'Acme', sans-serif;
 // font-family: 'Italiana', serif;
 // font-family: 'Italianno', cursive;
 // font-family: 'Josefin Sans', sans-serif;
+
+@include respond(big-desktop) {
+  // width < 1800
+}
+
+@include respond(tab-land) {
+  // width < 1200?
+}
+
+@include respond(tab-la) {
+  // width < 900?
+}
+
+@include respond(tab-potr) {
+  // width < 900?
+}
+@include respond(phone) {
+  // width < 900?
+}
 
 .container {
   height: fit-content;
@@ -21,7 +40,7 @@
   justify-content: center;
   align-items: center;
   margin: 0 25rem;
-
+  min-width: 50rem;
   z-index: 25;
 }
 
@@ -30,6 +49,11 @@
   transition: all 0.5s;
   animation: moveInLeft 2s cubic-bezier(1, 0, 0, 1);
   -webkit-animation: moveInLeft 2s cubic-bezier(1, 0, 0, 1);
+
+  @media only screen and (max-width: 1050px) {
+    margin-left: 2rem;
+    animation: none;
+  }
 }
 
 .icons {
@@ -126,6 +150,10 @@
   animation: moveInUp 1s cubic-bezier(1, 0, 0, 1);
   -webkit-animation: moveInUp 1s cubic-bezier(1, 0, 0, 1);
 
+  // @media only screen and (max-width: 800px) {
+  //   min-width: 37.5rem;
+  // }
+
   img {
     border-radius: 50%;
     width: 7%;
@@ -136,6 +164,11 @@
     animation: moveInLeft 2s cubic-bezier(1, 0, 0, 1);
 
     -webkit-animation: moveInLeft 2s cubic-bezier(1, 0, 0, 1);
+
+    @media only screen and (max-width: 1050px) {
+      visibility: hidden;
+      opacity: 0;
+    }
 
     &:hover {
       transform: scale(1.1);
@@ -155,7 +188,7 @@
 .sub-container {
   background-color: $color-bg;
   margin: 2rem 18rem;
-  width: 73%;
+  width: 100%;
   height: fit-content;
   position: absolute;
   top: 1.5rem;
@@ -164,6 +197,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media only screen and (max-width: 750px) {
+    max-width: 80rem;
+    margin: 0rem;
+    width: max-content;
+  }
 
   &__content__left-side {
     // background-color: aqua;
@@ -175,6 +214,10 @@
       color: $color-secondary;
       font-family: "Righteous", cursive;
       line-height: 2.5rem;
+
+      @media only screen and (max-width: 750px) {
+        font-size: $f-ah-main-2;
+      }
     }
 
     &__sub-heading {
@@ -183,6 +226,10 @@
       font-size: $f-ah-main-3;
       color: $color-secondary;
       font-family: "Abel", sans-serif;
+
+      @media only screen and (max-width: 750px) {
+        font-size: $f-ah-main-4;
+      }
     }
   }
 
@@ -209,6 +256,10 @@
       padding-left: 2rem;
       border: solid 1px $color-secondary;
       color: $color-secondary;
+
+      @media only screen and (max-width: 750px) {
+        width: 100%;
+      }
 
       &:focus {
         outline: none;
@@ -239,6 +290,10 @@
     background-color: $color-button;
     color: $color-secondary;
     transition: all 0.2s;
+
+    @media only screen and (max-width: 750px) {
+      width: 100%;
+    }
 
     &:hover {
       background-color: $color-button-hover;
