@@ -10,13 +10,18 @@
 .grid-container {
   // background-color: aquamarine;
   padding: 3rem;
-  margin-top: 50vh;
+  margin-top: 30rem;
   display: grid;
-  grid-template-columns: minmax(15rem, 2fr), minmax(15rem, 1fr);
+  grid-template-columns: minmax(5rem, 2fr), minmax(5rem, 1fr);
   grid-template-rows: min-content;
 
   @media only screen and (max-width: 850px) {
     padding: 3rem 0rem;
+  }
+
+  @media only screen and (max-width: 800px) {
+    padding: 0.5rem 0rem;
+    grid-template-columns: minmax(2rem, 2fr), minmax(2rem, 1fr);
   }
 }
 
@@ -28,6 +33,10 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+
+  // @media only screen and (max-width: 800px) {
+  //   margin-top: ;
+  // }
 
   &__main {
     font-family: "Abel", sans-serif;
