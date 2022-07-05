@@ -9,6 +9,24 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ArticlePageComponent } from './article-page/article-page.component';
 import { ContentComponent } from './content/content.component';
 import { FooterComponent } from './footer/footer.component';
+import { RouterModule, Routes } from '@angular/router';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+
+const appRoutes: Routes = [
+  // { path: '', component: LandingPageComponent },
+  // { path: '', component: ArticlePageComponent },
+  {
+    path: '',
+    children: [
+      { path: '', component: LandingPageComponent },
+      { path: '', component: ArticlePageComponent, outlet: 'secondary' },
+    ],
+  },
+  { path: 'readRTcle', component: ContentComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'contact', component: ContactComponent },
+];
 
 @NgModule({
   declarations: [
@@ -18,8 +36,15 @@ import { FooterComponent } from './footer/footer.component';
     ArticlePageComponent,
     ContentComponent,
     FooterComponent,
+    AboutComponent,
+    ContactComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FontAwesomeModule,
+    RouterModule.forRoot(appRoutes),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

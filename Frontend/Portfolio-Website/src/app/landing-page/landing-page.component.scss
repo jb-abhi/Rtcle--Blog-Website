@@ -36,12 +36,11 @@
   @media only screen and (max-width: 780px) {
     height: auto;
     justify-content: center;
+    flex-shrink: 0;
   }
 
   @media only screen and (max-width: 600px) {
-    padding: 1rem;
-    height: 50vh;
-    margin: 0rem 14.5rem;
+    min-width: 50rem;
   }
 }
 
@@ -62,14 +61,12 @@
     align-items: center;
   }
 
-  @media only screen and (max-width: 780px) {
-    flex: 1;
+  @media only screen and (max-width: 600px) {
+    flex-shrink: 0;
+    margin: 0;
+    width: 25rem;
+    padding: 0;
   }
-
-  // @media only screen and (max-width: 780px) {
-  //   height: auto;
-  //   justify-content: center;
-  // }
 
   &__heading-styles {
     &__2 {
@@ -128,6 +125,7 @@
       animation: moveInLeft 2.5s cubic-bezier(0.95, 0.05, 0.795, 0.035);
 
       @media only screen and (max-width: 600px) {
+        margin-top: 2.5rem;
         font-size: $heading--medium;
       }
 
@@ -172,22 +170,11 @@
   height: 100%;
 
   @include respond(big-desktop) {
-    height: 90%;
+    // height: 90%;
     margin-left: 15rem;
   }
 
   @media only screen and (max-width: 1330px) {
-    margin-left: 5rem;
-  }
-
-  @media only screen and (max-width: 1180px) {
-    margin-left: 5rem;
-  }
-
-  @media only screen and (max-width: 1100px) {
-    margin-left: 5rem;
-  }
-  @media only screen and (max-width: 880px) {
     margin-left: 5rem;
   }
 
@@ -199,7 +186,7 @@
 
   img {
     max-height: 100%;
-    height: auto;
+    // height: auto;
     flex-shrink: 0;
     object-fit: contain;
     animation: moveInRight 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
@@ -209,23 +196,19 @@
       max-height: 90%;
     }
 
-    @media only screen and (max-width: 1100px) {
+    @media only screen and (max-width: 1140px) {
       max-height: 80%;
     }
 
-    @media only screen and (max-width: 1100px) {
-      max-height: 70%;
+    @media only screen and (max-width: 1080px) {
+      max-height: 60%;
     }
 
-    @media only screen and (max-width: 1000px) {
-      max-height: 65%;
-    }
-
-    @media only screen and (max-width: 970px) {
-      max-height: 55%;
+    @media only screen and (max-width: 950px) {
+      max-height: 50%;
     }
     @media only screen and (max-width: 880px) {
-      max-height: 50%;
+      max-height: 45%;
     }
     @media only screen and (max-width: 780px) {
       opacity: none;

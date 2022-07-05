@@ -1,16 +1,21 @@
 @import "../../stylings/variables.scss";
 @import "../../stylings/mixins.scss";
 
-// .container {
-//   display: flex;
-// }
+.container {
+  // border: red solid 1px;
+  // height: 50vh;
+}
 
 .main-nav {
   // background-color: aqua;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  flex-grow: 1;
+
+  @media only screen and (max-width: 600px) {
+    flex-shrink: 0;
+    width: 600px;
+  }
 
   &__heading {
     color: $color-secondary;
@@ -20,9 +25,7 @@
     animation: moveInDown 2s cubic-bezier(0.075, 0.82, 0.165, 1);
 
     @media only screen and (max-width: 700px) {
-      margin-right: 30rem;
-      margin-left: 10rem;
-      flex-shrink: 0;
+      left: 5rem;
     }
 
     &:hover {
@@ -40,17 +43,35 @@
     // background-color: rgb(0, 17, 255);
     display: flex;
     position: relative;
-    right: 27rem;
+    right: 20rem;
     bottom: 0.6rem;
-    width: 25rem;
-    flex-shrink: 1;
+    width: 40rem;
     font-size: $heading--medium;
+    // border: solid 1px red;
     padding: 0 2.7rem;
-    justify-content: space-between;
+    justify-content: space-around;
     list-style: none;
     animation: moveInDown 1s cubic-bezier(1, 0, 0, 1);
 
+    .active {
+      color: $color-secondary;
+      text-decoration: none;
+      padding: 0.5rem 2rem;
+      border-radius: 1rem;
+      border-bottom: solid 3px $color-button-hover;
+      cursor: pointer;
+    }
+
+    @media only screen and (max-width: 1800px) {
+      right: 23rem;
+    }
+
     @media only screen and (max-width: 700px) {
+      right: 17rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+      right: 10rem;
       flex-shrink: 0;
     }
 
@@ -60,6 +81,9 @@
       font-weight: 700;
       transition: all 0.2s;
 
+      @media only screen and (hover: none) {
+        color: $color-secondary;
+      }
       &:hover {
         color: $color-secondary;
         cursor: pointer;
@@ -72,7 +96,6 @@
     background-color: $color-button;
     padding: 1rem 3rem;
     border: none;
-    // min-width: 10rem;
     color: $color-secondary;
     font-size: $heading--medium-2;
     border-radius: 0.8rem;
@@ -80,9 +103,8 @@
     transition: all 0.2s;
 
     @media only screen and (max-width: 700px) {
-      margin-right: 5rem;
       position: relative;
-      right: 4rem;
+      right: 5rem;
       flex-shrink: 0;
     }
 

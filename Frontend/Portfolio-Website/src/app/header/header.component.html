@@ -5,10 +5,41 @@
         RTcle <span class="main-nav__heading__copyright">&#8482;</span>
       </h3>
       <ul class="main-nav__links">
-        <li><a href="index.html" class="main-nav__links__link">Home</a></li>
-        <li><a href="about.html" class="main-nav__links__link">About</a></li>
         <li>
-          <a href="contact.html" class="main-nav__links__link">Contact</a>
+          <a
+            routerLink="/"
+            class="main-nav__links__link"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/readRTcle"
+            class="main-nav__links__link"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Read RTcle</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/about"
+            class="main-nav__links__link"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/contact"
+            class="main-nav__links__link"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Contact</a
+          >
         </li>
       </ul>
       <button class="main-nav__button">Sign in</button>
