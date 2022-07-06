@@ -1,0 +1,42 @@
+.container {
+  background-color: #1d2029;
+  padding: 0rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.items {
+  color: #fbfbfc;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(12rem, 1fr))[5];
+      grid-template-columns: repeat(5, minmax(12rem, 1fr));
+  gap: 2.5rem;
+  padding: 2.5rem;
+  font-size: 1.4rem;
+}
+
+.item {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: #fbfbfc;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  grid-column: 1/-1;
+}
+
+.rtcle_desc {
+  grid-column: 1/-1;
+  text-align: center;
+}
+/*# sourceMappingURL=footer.component.css.map */

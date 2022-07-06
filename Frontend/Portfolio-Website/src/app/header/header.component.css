@@ -9,12 +9,27 @@
       justify-content: space-around;
 }
 
+@media only screen and (max-width: 600px) {
+  .main-nav {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    width: 600px;
+  }
+}
+
 .main-nav__heading {
   color: #fbfbfc;
   font-size: 3.2rem;
   position: relative;
+  margin-right: 20rem;
   -webkit-animation: moveInDown 2s cubic-bezier(0.075, 0.82, 0.165, 1);
           animation: moveInDown 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@media only screen and (max-width: 700px) {
+  .main-nav__heading {
+    left: 5rem;
+  }
 }
 
 .main-nav__heading:hover {
@@ -23,7 +38,6 @@
 }
 
 .main-nav__heading__copyright {
-  background-color: black;
   font-size: 1.5rem;
   position: absolute;
 }
@@ -33,19 +47,45 @@
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  right: 27rem;
+  right: 20rem;
   bottom: 0.6rem;
-  width: 25rem;
-  -ms-flex-negative: 1;
-      flex-shrink: 1;
+  width: 40rem;
   font-size: 1.5rem;
   padding: 0 2.7rem;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   list-style: none;
   -webkit-animation: moveInDown 1s cubic-bezier(1, 0, 0, 1);
           animation: moveInDown 1s cubic-bezier(1, 0, 0, 1);
+}
+
+.main-nav__links .active {
+  color: #fbfbfc;
+  text-decoration: none;
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  border-bottom: solid 3px #25a56d;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1800px) {
+  .main-nav__links {
+    right: 23rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .main-nav__links {
+    right: 17rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main-nav__links {
+    right: 10rem;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
 }
 
 .main-nav__links__link {
@@ -54,6 +94,12 @@
   font-weight: 700;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+}
+
+@media only screen and (hover: none) {
+  .main-nav__links__link {
+    color: #fbfbfc;
+  }
 }
 
 .main-nav__links__link:hover {
@@ -74,6 +120,15 @@
           animation: moveInDown 1s cubic-bezier(0.215, 0.61, 0.355, 1);
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+}
+
+@media only screen and (max-width: 700px) {
+  .main-nav__button {
+    position: relative;
+    right: 5rem;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
 }
 
 .main-nav__button:hover {

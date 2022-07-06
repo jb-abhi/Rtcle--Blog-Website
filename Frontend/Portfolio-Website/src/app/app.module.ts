@@ -12,6 +12,8 @@ import { FooterComponent } from './footer/footer.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { HttpClientModule } from '@angular/common/http';
+import { RtcleService } from './rtcle.service';
 
 const appRoutes: Routes = [
   // { path: '', component: LandingPageComponent },
@@ -43,6 +45,7 @@ const appRoutes: Routes = [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes),
   ],
   providers: [],
