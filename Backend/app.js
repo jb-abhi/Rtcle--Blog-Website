@@ -2,12 +2,12 @@ const express = require("express");
 const http = require("http");
 const mongoose = require("mongoose");
 const cors = require("cors");
-// var bodyparser=require('body-parser');
+
 const websiteData = require("./models/data");
 
 var app = new express();
 app.use(cors());
-// app.use(bodyparser.json());
+
 mongoose
   .connect(
     "mongodb+srv://AbhijithJB:BmcG2Pfd0uUlvPHv@cluster0.c5szz.mongodb.net/BlogData?retryWrites=true&w=majority",
@@ -46,11 +46,6 @@ app.get("/readRTcle", function (req, res) {
     });
   });
 });
-
-// websiteData.find({}, function (err, datas) {
-//   if (err) console.warn(err);
-//   console.warn(datas);
-// });
 
 app.listen(port, function () {
   console.log("listening to port 3000");
