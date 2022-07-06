@@ -3,6 +3,9 @@ const http = require("http");
 const mongoose = require("mongoose");
 const cors = require("cors");
 
+const compression = require("compression");
+app.use(compression());
+
 const websiteData = require("./models/data");
 
 var app = new express();
